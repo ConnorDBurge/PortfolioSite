@@ -1,4 +1,67 @@
-$base-color: #47536B;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Rubik:wght@500&family=Work+Sans:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Rubik:wght@500&family=Source+Sans+Pro:wght@200&family=Work+Sans:wght@100;300&display=swap');
+
+
+$base-color: #45536B;
+$base-font-family: 'Source Sans Pro', sans-serif;
+$font-color-w: white;
+$font-color-b: #45536B;
+
+.flex-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    width: 290px;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid $base-color;
+}
+
+.inner-grid {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.p-15-m {
+    padding: 15px;
+}
+
+.p-25-m {
+    padding: 25px;
+}
+
+.p-25-s {
+    @media (max-width: 750px) {
+        padding: 25px 25px 0 25px;
+    }
+}
+
+.m-25 {
+    margin: 25px;
+}
+
+.card-blue {
+    border-radius: 20px;
+    box-shadow: 
+        -3px -3px 7px #4f5e79, 
+        3px 3px 7px #384255;
+}
 
 body {
     margin: 0;
@@ -6,35 +69,271 @@ body {
 }
 
 .content {
+    display: grid;
     grid-template-areas: 
         'cover-photo'
         'navbar'
         'main'
         'footer';
+    font-family: $base-font-family;
+    color: $font-color-b;
 }
 
 .cover-photo {
     grid-area: cover-photo;
-    width: 100%;
-    height: 100vh;
+    text-align: center; /* ensures the image is always in the h-middle */
+
+    &__greeting {
+        position: absolute;
+        width: 100%;
+        height: 40vh;
+        color: $base-color;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__name{
+        margin: 0;
+        font-size: 6rem;
+        font-weight: bold;
+        @media (max-width: 800px) {
+            font-size: 3.5rem;
+        }
+        @media (max-width: 400px) {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__sub {
+        width: auto;
+    }
+
+    &__job {
+        border-top: 2px solid $base-color;
+        margin: 20px;
+        padding-top: 15px;
+        font-size: 3.5rem;
+        font-family: $base-font-family;
+        @media (max-width: 800px) {
+            font-size: 2.0rem;
+            border-top: 2px solid $base-color;
+            margin: 15px;
+            padding-top: 10px;
+        }
+    }
 
     &__img {
+        float: left;
         width: 100%;
+        height: 95vh;
+        object-fit: cover;
+        object-position: 75% 75%;
     }
 }
 
-.main-content {
+
+
+
+
+
+.nav {
+    background-color: $base-color;
+    grid-area: navbar;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    &__item {
+        font-family: $base-font-family;
+        font-size: 2.0rem;
+        margin: 0 25px;
+        color: $font-color-w;
+        text-decoration: none;
+        @media (max-width: 589px) {
+            font-size: 1.5rem;
+            margin: 0 15px;
+        }
+        @media (max-width: 400px) {
+            font-size: 1.3rem;
+            margin: 0 10px;
+        }
+    }
+}
+
+
+
+
+
+.main {
     grid-area: main;
     height: auto;
+    background-color: white;
 }
 
-.footer {
-    grid-area: footer;
-    text-align: center;
-    padding: 0 0 15px 0;
+.about {
+    width: 100%;
 
-    &__link {
-        margin: 0 10px 0 10px;
-        text-decoration: none;
+    &__main {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-areas: 
+            'one two';
+        @media (max-width: 800px) {
+            grid-template-areas: 
+                'one' 
+                'two';
+        }
     }
+
+    &__sec-one {
+        grid-area: one;
+        text-align: center;
+        margin: auto;
+        font-size: 1.8rem;
+    }
+
+    &__text {
+        margin-top: 0;
+    }
+
+    &__photo {
+        font-weight: bold;
+    }
+
+    &__img {
+        border-radius: 50%;
+        border: 2px solid $base-color;
+        height: 300px;
+    }
+
+    &__sec-two {
+        grid-area: two;
+        width: 600px;
+        text-align: center;
+        margin: auto;
+        font-size: 1.5rem;
+        padding-bottom: 0;
+        @media (max-width: 1005px) {
+            width: 400px;
+        }
+        @media (max-width: 401px) {
+            width: 320px;
+            text-align: center;
+        }
+        
+    }
+}
+
+
+.skills {
+    width: 100%;
+    background-color: #EEEEEE;
+
+    &__main {
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+            'one two'
+            'three four';
+        @media (max-width: 800px) {
+            grid-template-areas: 
+                'one' 
+                'two'
+                'three'
+                'four';
+        }
+    }
+
+    &__sec-one {
+        grid-area: one;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    &__sec-two {
+        grid-area: two;
+        text-align: center;
+        font-size: 2.0rem;
+    }
+
+    &__sec-three {
+        grid-area: three;
+        text-align: center;
+        font-size: 2.0rem;
+    }
+
+    &__sec-four {
+        grid-area: four;
+        text-align: center;
+        font-size: 2.0rem;
+    }
+    
+    &__text {
+        margin: 0;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
+
+    &__logo {
+        margin: 15px 15px;
+    }
+}
+
+.about-skills {
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    transform: rotate(180deg) scaleX(-1);
+    background-color: #EEEEEE;
+    height: 50px;
+    width: 100%;
+}
+
+.skills-work {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 77% 100%, 12% 42%, 0 60%);
+    background-color: #EEEEEE;
+    height: 50px;
+    width: 100%;
+}
+
+.work-education {
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    transform: rotate(180deg) scaleX(-1);
+    background-color: #EEEEEE;
+    height: 50px;
+    width: 100%;
+}
+
+.education-contact {
+    clip-path: polygon(100% 100%, 100% 0, 0 0);
+    background-color: #EEEEEE;
+    height: 50px;
+    width: 100%;
+}
+
+.work {
+    height: 50vh;
+}
+
+.education {
+    height: 50vh;
+    background-color: #EEEEEE;
+}
+
+.contact {
+    height: 50vh;
 }
