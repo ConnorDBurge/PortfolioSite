@@ -124,8 +124,8 @@ body {
         @media (max-width: 800px) {
             font-size: 3.5rem;
         }
-        @media (max-width: 400px) {
-            font-size: 2.5rem;
+        @media (max-width: 450px) {
+            font-size: 2.2rem;
         }
     }
 
@@ -142,7 +142,7 @@ body {
         font-weight: 400;
         letter-spacing: 6px;
         @media (max-width: 800px) {
-            font-size: 2.0rem;
+            font-size: 1.8rem;
             margin: 15px;
             padding-top: 10px;
         }
@@ -480,7 +480,6 @@ body {
 }
 
 .education {
-    height: 50vh;
     background-color: #EEEEEE;
 }
 
@@ -530,6 +529,43 @@ body {
                 color: white;
                 text-decoration: none;
             }
+        }
+    }
+}
+
+.education {
+    padding: 0 300px 25px 300px;
+    @media (max-width: 1400px) {
+        padding: 0 200px 25px 200px;
+    }
+    @media (max-width: 970px) {
+        padding: 0 100px 25px 100px;
+    }
+    @media (max-width: 650px) {
+        padding: 0 15px 25px 15px;
+    }
+
+    &__item {
+        padding: 25px 0 0 0;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        margin: 10px 0 10px 0;
+    }
+
+    &__link {
+        color: $base-color;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 2.0rem;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 }
