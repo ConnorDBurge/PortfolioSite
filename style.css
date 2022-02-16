@@ -150,6 +150,7 @@ body {
 .cover-photo__name {
   margin: 0;
   font-size: 6rem;
+  letter-spacing: 6px;
 }
 
 @media (max-width: 800px) {
@@ -175,6 +176,7 @@ body {
   font-size: 3.5rem;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
+  letter-spacing: 6px;
 }
 
 @media (max-width: 800px) {
@@ -182,6 +184,12 @@ body {
     font-size: 2.0rem;
     margin: 15px;
     padding-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cover-photo__job {
+    letter-spacing: 3px;
   }
 }
 
