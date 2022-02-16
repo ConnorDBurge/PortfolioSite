@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Rubik:wght@500&family=Work+Sans:wght@100;300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Rubik:wght@500&family=Source+Sans+Pro:wght@200&family=Work+Sans:wght@100;300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Rubik:wght@500&family=Source+Sans+Pro:wght@200;400;900&family=Work+Sans:wght@100;300&display=swap");
 .flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,6 +34,7 @@
 
 .title {
   font-size: 2.5rem;
+  font-weight: 400;
   margin-bottom: 0;
   width: 290px;
   text-align: center;
@@ -82,6 +82,19 @@
           box-shadow: -3px -3px 7px #4f5e79,  3px 3px 7px #384255;
 }
 
+.card-blue:hover {
+  -webkit-box-shadow: 3px 3px 7px #4f5e79,  -3px -3px 7px #384255;
+          box-shadow: 3px 3px 7px #4f5e79,  -3px -3px 7px #384255;
+  cursor: pointer;
+}
+
+.card-grey {
+  border-radius: 20px;
+  margin: 10px;
+  -webkit-box-shadow: -3px -3px 7px #f8f8f8,  3px 3px 7px #dadada;
+          box-shadow: -3px -3px 7px #f8f8f8,  3px 3px 7px #dadada;
+}
+
 body {
   margin: 0;
   background-color: #45536B;
@@ -90,8 +103,9 @@ body {
 .content {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'cover-photo' 'navbar' 'main' 'footer';
+      grid-template-areas: 'cover-photo' 'navbar' 'main';
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 200;
   color: #45536B;
 }
 
@@ -100,7 +114,6 @@ body {
   -ms-grid-column: 1;
   grid-area: cover-photo;
   text-align: center;
-  /* ensures the image is always in the h-middle */
 }
 
 .cover-photo__greeting {
@@ -126,7 +139,6 @@ body {
 .cover-photo__name {
   margin: 0;
   font-size: 6rem;
-  font-weight: bold;
 }
 
 @media (max-width: 800px) {
@@ -151,6 +163,7 @@ body {
   padding-top: 15px;
   font-size: 3.5rem;
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
 }
 
 @media (max-width: 800px) {
@@ -199,6 +212,17 @@ body {
   padding: 0;
 }
 
+@media (max-width: 589px) {
+  .nav__list {
+    display: none;
+  }
+}
+
+.nav__list li {
+  margin: 0 10px;
+  text-align: center;
+}
+
 .nav__item {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 2.0rem;
@@ -209,7 +233,7 @@ body {
 
 @media (max-width: 589px) {
   .nav__item {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 0 15px;
   }
 }
@@ -217,7 +241,7 @@ body {
 @media (max-width: 400px) {
   .nav__item {
     font-size: 1.3rem;
-    margin: 0 10px;
+    margin: 0 15px;
   }
 }
 
@@ -263,7 +287,7 @@ body {
 }
 
 .about__photo {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .about__img {
@@ -321,6 +345,10 @@ body {
   font-size: 1.8rem;
 }
 
+.skills__sub-title {
+  font-weight: 400;
+}
+
 @media (max-width: 401px) {
   .skills__sub-title {
     margin-top: 5px;
@@ -357,10 +385,6 @@ body {
   text-align: center;
 }
 
-.skills__img {
-  width: auto;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -395,16 +419,21 @@ body {
   border: 1px solid #cccccc;
 }
 
-.timeline__content h1 {
+.timeline__content h1, .timeline__content h2 {
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 30px;
-  margin-bottom: 10px;
+  margin: 5px 0 5px 0;
+}
+
+.timeline__content h2 {
+  font-size: 15px;
 }
 
 .timeline__content p {
   font-size: 16px;
   line-height: 30px;
+  margin: 5px 0 0 0;
 }
 
 .timeline__date {
@@ -414,7 +443,7 @@ body {
   letter-spacing: 2px;
 }
 
-@media only screen and (min-width: 964px) {
+@media only screen and (min-width: 1134px) {
   .timeline::before {
     content: '';
     position: absolute;
@@ -426,22 +455,22 @@ body {
             transform: translateY(30px);
   }
   .timeline ul li {
-    width: 50%;
+    width: 60%;
     margin-bottom: 50px;
     position: relative;
   }
   .timeline ul li:nth-child(odd) {
     float: left;
     clear: right;
-    -webkit-transform: translateX(-60px);
-            transform: translateX(-60px);
+    -webkit-transform: translateX(-141px);
+            transform: translateX(-141px);
     border-radius: 20px 0 20px 20px;
   }
   .timeline ul li:nth-child(even) {
     float: right;
     clear: left;
-    -webkit-transform: translateX(60px);
-            transform: translateX(60px);
+    -webkit-transform: translateX(141px);
+            transform: translateX(141px);
     border-radius: 0 20px 20px 20px;
   }
   .timeline ul li::after {
