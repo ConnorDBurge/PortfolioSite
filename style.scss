@@ -148,6 +148,14 @@ body {
         object-fit: cover;
         object-position: 75% 75%;
     }
+
+    &__scroll {
+        position: relative;
+        bottom: 45px;
+        @media (min-width: 589px) {
+            display: none;
+        }
+    }
 }
 
 

@@ -191,6 +191,17 @@ body {
      object-position: 75% 75%;
 }
 
+.cover-photo__scroll {
+  position: relative;
+  bottom: 45px;
+}
+
+@media (min-width: 589px) {
+  .cover-photo__scroll {
+    display: none;
+  }
+}
+
 .nav {
   background-color: #45536B;
   -ms-grid-row: 2;
