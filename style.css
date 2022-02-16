@@ -116,6 +116,12 @@ body {
   text-align: center;
 }
 
+@media (max-width: 589px) {
+  .cover-photo {
+    height: 100vh;
+  }
+}
+
 .cover-photo__greeting {
   position: absolute;
   width: 100%;
