@@ -331,5 +331,41 @@ body {
 }
 
 .contact {
-    height: 50vh;
+    padding: 0 300px 25px 300px;
+    @media (max-width: 1400px) {
+        padding: 0 200px 25px 200px;
+    }
+    @media (max-width: 970px) {
+        padding: 0 100px 25px 100px;
+    }
+    @media (max-width: 650px) {
+        padding: 0 15px 25px 15px;
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+    }
+
+    &__link {
+        color: $base-color;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 1px solid $base-color;
+        border-radius: 25px;
+        padding: 10px 45px;
+        font-size: 1.5rem;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
 }
