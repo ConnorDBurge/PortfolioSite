@@ -101,14 +101,20 @@ body {
     }
 
     &__greeting {
-        position: absolute;
+        // position: absolute;
         width: 100%;
-        height: 40vh;
-        color: $base-color;
+        height: 100vh;
+        color: white;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+    }
+
+    &__muted {
+        color: #c9c9c9;
+        position: absolute;
+        top: 15px;
     }
 
     &__name{
@@ -127,7 +133,7 @@ body {
     }
 
     &__job {
-        border-top: 2px solid $base-color;
+        border-top: 2px solid white;
         margin: 20px;
         padding-top: 15px;
         font-size: 3.5rem;
@@ -135,23 +141,22 @@ body {
         font-weight: 400;
         @media (max-width: 800px) {
             font-size: 2.0rem;
-            border-top: 2px solid $base-color;
             margin: 15px;
             padding-top: 10px;
         }
     }
 
-    &__img {
-        float: left;
-        width: 100%;
-        height: 95vh;
-        object-fit: cover;
-        object-position: 75% 75%;
-    }
+    // &__img {
+    //     float: left;
+    //     width: 100%;
+    //     height: 95vh;
+    //     object-fit: cover;
+    //     object-position: 75% 75%;
+    // }
 
     &__scroll {
         position: relative;
-        bottom: 45px;
+        bottom: 90px;
         @media (min-width: 670px) {
             display: none;
         }
