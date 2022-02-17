@@ -1,0 +1,44 @@
+@import "../../styles/variables.scss";
+
+
+.nav {
+    background-color: $base-color;
+    grid-area: navbar;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        @media (max-width: 670px) {
+            display: none;
+        }
+
+        li {
+            margin: 0 10px;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        font-family: $base-font-family;
+        font-size: 2.0rem;
+        margin: 0 25px;
+        color: $font-color-w;
+        text-decoration: none;
+        @media (max-width: 589px) {
+            font-size: 1.4rem;
+            margin: 0 15px;
+        }
+        @media (max-width: 400px) {
+            font-size: 1.3rem;
+            margin: 0 15px;
+        }
+    }
+}
