@@ -439,7 +439,12 @@ body {
     }
 }
 
-
+.about-div {
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 77% 100%, 12% 42%, 0 60%);
+    background-color: $base-color;
+    height: 50px;
+    width: 100%;
+}
 
 .about-skills {
     clip-path: polygon(100% 100%, 100% 0, 0 0);
