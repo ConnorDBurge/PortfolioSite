@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="observers.js" defer></script>
 </head>
 
 <body>
@@ -28,27 +29,27 @@
 
         <nav class="nav">
             <ul class="nav__list">
-                <li class="card-blue i01">
+                <li class="card-blue nav__button">
                     <a class="nav__item" href="#about">
                         About
                     </a>
                 </li>
-                <li class="card-blue i02">
+                <li class="card-blue nav__button">
                     <a class="nav__item" href="#skills">
                         Skills
                     </a>
                 </li>
-                <li class="card-blue">
+                <li class="card-blue nav__button">
                     <a class="nav__item" href="#work">
                         Work
                     </a>
                 </li>
-                <li class="card-blue">
+                <li class="card-blue nav__button">
                     <a class="nav__item" href="#education">
                         Education
                     </a>
                 </li>
-                <li class="card-blue">
+                <li class="card-blue nav__button">
                     <a class="nav__item" href="#contact">
                         Contact
                     </a>
@@ -60,11 +61,11 @@
         <div class="main">
             <div class="about-div" id="about"></div>
             <div class="about">
-                <div class="about__header header">
+                <div class="about__header header fader">
                     <h1 class="about__title title">About</h1>
                 </div>
                 <div class="about__main">
-                    <div class="about__sec-one p-15-m">
+                    <div class="about__sec-one p-15-m fader">
                         <p class="about__text about__photo">
                             Hey, I'm Connor
                         </p>
@@ -72,7 +73,7 @@
                             <img class="about__img" src="images/headshot.jpg" alt="">
                         </div>
                     </div>
-                    <div class="about__sec-two p-15-m">
+                    <div class="about__sec-two p-15-m fader">
                         <p class="about__text">
                             Searching for my first Software Engineer position post military that will challenge me daily
                             and
@@ -84,13 +85,13 @@
                             <br><br>
                             Check out my recent work on my GitHub.
                         </p>
-                        <a class="about__link" href="https://www.linkedin.com/in/connordburge">
+                        <a class="about__link fader" href="https://www.linkedin.com/in/connordburge">
                             <img src="images/linkedin.svg" alt="linkedin">
                         </a>
-                        <a class="about__link" href="https://github.com/ConnorDBurge">
+                        <a class="about__link fader" href="https://github.com/ConnorDBurge">
                             <img src="images/github.svg" alt="github">
                         </a>
-                        <a class="about__link" href="/Connor Burge Resume.pdf">
+                        <a class="about__link fader" href="/Connor Burge Resume.pdf">
                             <img src="images/pdf.svg" alt="pdf">
                         </a>
                     </div>
@@ -98,81 +99,81 @@
             </div>
             <div class="about-skills" id="skills"></div>
             <div class="skills">
-                <div class="skills__header header">
+                <div class="skills__header header fader">
                     <h1 class="skills__title title">Skills</h1>
                 </div>
                 <div class="skills__main">
                     <div class="skills__sec-one p-15-m">
-                        <h3 class="skills__sub-title">Languages and Frameworks</h3>
+                        <h3 class="skills__sub-title fader">Languages and Frameworks</h3>
                         <div class="skills__list flex-center">
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/languages/python.svg">
                                 <p>Python</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/languages/javascript.svg">
                                 <p>Javascript</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/languages/java.svg">
                                 <p>Java</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/languages/html.svg">
                                 <p>HTML</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/languages/css.svg">
                                 <p>CSS</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/frameworks/react.svg">
                                 <p>React</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img class="skills__img" src="images/frameworks/dajngo.svg">
                                 <p>Django</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/frameworks/bootstrap.svg">
                                 <p>Bootstrap</p>
                             </div>
                         </div>
-                        <h3 class="skills__sub-title">Databases and Tools</h3>
+                        <h3 class="skills__sub-title fader">Databases and Tools</h3>
                         <div class="skills__list flex-center">
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/databases/postgresql.svg">
                                 <p>PostreSQL</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/databases/mongodb.svg">
                                 <p>MongoDB</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/databases/mysql.svg">
                                 <p>MySQL</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/tools/aws.svg">
                                 <p>AWS</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/tools/git.svg">
                                 <p>Git</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/tools/github.svg">
                                 <p>GitHub</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/tools/heroku.svg">
                                 <p>Heroku</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/tools/postman.svg">
                                 <p>Postman</p>
                             </div>
-                            <div class="skills__item">
+                            <div class="skills__item fader">
                                 <img src="images/tools/npm.svg">
                                 <p>NPM</p>
                             </div>
@@ -182,13 +183,13 @@
             </div>
             <div class="skills-work" id="work"></div>
             <div class="work">
-                <div class="work__header header">
+                <div class="work__header header fader">
                     <h1 class="work__title title">Work</h1>
                 </div>
                 <div class="container">
                     <div class="timeline">
                         <ul>
-                            <li>
+                            <li class="fader">
                                 <div class="timeline__content">
                                     <h2 class="timeline__date">August 2018 - Present</h2>
                                     <h1>Logistics & Operations</h1>
@@ -206,7 +207,7 @@
                                     </p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="fader">
                                 <div class="timeline__content">
                                     <h2 class="timeline__date">August 2016 - August 2018</h2>
                                     <h1>Logistics Manager</h1>
@@ -223,7 +224,7 @@
                                         support of over 180 complex training events.</p>
                                 </div>
                             </li>
-                            <li>
+                            <li class="fader">
                                 <div class="timeline__content">
                                     <h2 class="timeline__date">May 2017 - September 2017</h2>
                                     <h1>Warehouse Manager</h1>
@@ -242,11 +243,11 @@
             </div>
             <div class="work-education" id="education"></div>
             <div class="education">
-                <div class="education__header header">
+                <div class="education__header header fader">
                     <h1 class="education__title title">Education</h1>
                 </div>
                 <div class="education__info">
-                    <div class="education__item">
+                    <div class="education__item fader">
                         <p><b><a class="education__link" href="#">
                                     University of Maryland Global Campus
                                 </a></b>
@@ -254,7 +255,7 @@
                         <p class="education__text">Bachelors of Science | Computer Science</p>
                         <p class="education__text"><small><i>August 2018 - Present</i></small></p>
                     </div>
-                    <div class="education__item">
+                    <div class="education__item fader">
                         <p><b><a class="education__link" href="#">
                                     Amazon Web Services
                                 </a></b>
@@ -266,10 +267,10 @@
             </div>
             <div class="education-contact" id="contact"></div>
             <div class="contact">
-                <div class="contact__header header">
+                <div class="contact__header header fader">
                     <h1 class="contact__title title">Contact</h1>
                 </div>
-                <div class="contact__info">
+                <div class="contact__info fader">
                     <p class="contact__text">Please reach out to me with the contact information below. Connect with me
                         on
                         <b><a class="contact__link" href="https://www.linkedin.com/in/connordburge">LinkedIn</a></b> and

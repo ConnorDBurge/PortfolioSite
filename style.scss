@@ -5,6 +5,17 @@ $base-font-family: 'Source Sans Pro', sans-serif;
 $font-color-w: white;
 $font-color-b: #45536B;
 
+.fader {
+    transition: all 0.6s;
+    transform: translateY(200px);
+    opacity: 0;
+
+    &.appear {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .flex-center {
     display: flex;
     flex-flow: row wrap;
@@ -160,6 +171,7 @@ body {
             display: none;
         }
     }
+
 }
 
 
@@ -318,7 +330,6 @@ body {
         justify-content: center;
         align-items: center;
         width: 150px;
-
 
         p {
             text-align: center;
