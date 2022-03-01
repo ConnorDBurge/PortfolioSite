@@ -5,6 +5,15 @@ $base-font-family: 'Source Sans Pro', sans-serif;
 $font-color-w: white;
 $font-color-b: #45536B;
 
+body {
+    margin: 0;
+    background-color: $base-color;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .fader {
     transition: all 0.8s;
     transform: translateY(100px);
@@ -93,11 +102,6 @@ $font-color-b: #45536B;
         3px 3px 7px #dadada;
 }
 
-body {
-    margin: 0;
-    background-color: $base-color;
-}
-
 .content {
     display: grid;
     grid-template-areas: 
@@ -164,9 +168,7 @@ body {
         }
         @media (max-width: 400px) {
             letter-spacing: 3px;
-
         }
-        
     }
     
     &__scroll {
