@@ -173,7 +173,7 @@ html {
     
     &__scroll {
         position: relative;
-        bottom: 90px;
+        bottom: 130px;
         @media (min-width: 670px) {
             display: none;
         }
@@ -273,7 +273,7 @@ html {
         border-radius: 50%;
         border: 2px solid $base-color;
         height: 300px;
-        box-shadow: 3px 3px 7px rgb(182, 182, 182), 
+        box-shadow: 3px 3px 7px rgb(182, 182, 182);
     }
 
     &__sec-two {
@@ -365,11 +365,12 @@ html {
         padding: 0;
 
         li {
-            padding: 20px;
+            padding: 20px 20px 10px 20px;
             background-color: #EEEEEE;
             border-radius: 10px;
             margin-bottom: 20px;
             border: 1px solid #cccccc;
+            box-shadow: 3px 3px 7px rgb(182, 182, 182);
         }
     }
 
@@ -399,6 +400,43 @@ html {
         margin-bottom: 10px;
         letter-spacing: 2px;
     }
+
+    &__logo {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        height: 50px;
+    }
+
+    &__hidden {
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    &__seemore {
+        text-align: center;
+        margin: 10px 0 0 0;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #dddddd;
+            border-radius: 0 0 10px 10px;
+        }
+
+        &.open {
+            cursor: pointer;
+            background-color: rgb(255, 168, 168);
+            color: white;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.5s;
+
+            &:hover {
+                background-color: rgb(255, 140, 140);
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1134px) {
@@ -421,25 +459,15 @@ html {
     .timeline ul li:nth-child(odd) {
         float: left;
         clear: right;
-        transform: translateX(-141px);
+        transform: translateX(-165px);
         border-radius: 20px 0 20px 20px;
     } 
 
     .timeline ul li:nth-child(even) {
         float: right;
         clear: left;
-        transform: translateX(141px);
+        transform: translateX(165px);
         border-radius: 0 20px 20px 20px;
-    }
-
-    .timeline ul li::after {
-        content: '';
-        position: absolute;
-        height: 20px;
-        width: 20px;
-        background-color: $base-color;
-        border-radius: 50%;
-        top: 0;
     }
 
     .timeline ul li:nth-child(odd)::after {
@@ -456,6 +484,20 @@ html {
     .timeline__date {
         position: absolute;
         top: -45px;
+    }
+
+    .timeline__logo {
+        position: absolute;
+        top: 0px;
+        height: 60px;
+        
+        &.odd {
+            right: -75px;
+        }
+
+        &.even {
+            left: -73px;
+        }
     }
 }
 

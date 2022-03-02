@@ -220,7 +220,7 @@ html {
 
 .cover-photo__scroll {
   position: relative;
-  bottom: 90px;
+  bottom: 130px;
 }
 
 @media (min-width: 670px) {
@@ -458,11 +458,13 @@ html {
 }
 
 .timeline ul li {
-  padding: 20px;
+  padding: 20px 20px 10px 20px;
   background-color: #EEEEEE;
   border-radius: 10px;
   margin-bottom: 20px;
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 3px 3px 7px #b6b6b6;
+          box-shadow: 3px 3px 7px #b6b6b6;
 }
 
 .timeline__content h1, .timeline__content h2 {
@@ -489,6 +491,41 @@ html {
   letter-spacing: 2px;
 }
 
+.timeline__logo {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 50px;
+}
+
+.timeline__hidden.hidden {
+  display: none;
+}
+
+.timeline__seemore {
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.timeline__seemore:hover {
+  cursor: pointer;
+  background-color: #dddddd;
+  border-radius: 0 0 10px 10px;
+}
+
+.timeline__seemore.open {
+  cursor: pointer;
+  background-color: #ffa8a8;
+  color: white;
+  border-radius: 0 0 10px 10px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.timeline__seemore.open:hover {
+  background-color: #ff8c8c;
+}
+
 @media only screen and (min-width: 1134px) {
   .timeline::before {
     content: '';
@@ -508,25 +545,16 @@ html {
   .timeline ul li:nth-child(odd) {
     float: left;
     clear: right;
-    -webkit-transform: translateX(-141px);
-            transform: translateX(-141px);
+    -webkit-transform: translateX(-165px);
+            transform: translateX(-165px);
     border-radius: 20px 0 20px 20px;
   }
   .timeline ul li:nth-child(even) {
     float: right;
     clear: left;
-    -webkit-transform: translateX(141px);
-            transform: translateX(141px);
+    -webkit-transform: translateX(165px);
+            transform: translateX(165px);
     border-radius: 0 20px 20px 20px;
-  }
-  .timeline ul li::after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background-color: #45536B;
-    border-radius: 50%;
-    top: 0;
   }
   .timeline ul li:nth-child(odd)::after {
     -webkit-transform: translate(50%, -50%);
@@ -543,6 +571,17 @@ html {
   .timeline__date {
     position: absolute;
     top: -45px;
+  }
+  .timeline__logo {
+    position: absolute;
+    top: 0px;
+    height: 60px;
+  }
+  .timeline__logo.odd {
+    right: -75px;
+  }
+  .timeline__logo.even {
+    left: -73px;
   }
 }
 
