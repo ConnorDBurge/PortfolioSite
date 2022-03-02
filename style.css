@@ -338,6 +338,8 @@ html {
   border-radius: 50%;
   border: 2px solid #45536B;
   height: 300px;
+  -webkit-box-shadow: 3px 3px 7px #b6b6b6;
+          box-shadow: 3px 3px 7px #b6b6b6;
 }
 
 .about__sec-two {
