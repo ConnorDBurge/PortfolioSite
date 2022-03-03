@@ -238,13 +238,13 @@ html {
 }
 
 .cover-photo__sub {
+  margin-top: 20px;
+  border-top: 2px solid white;
   width: auto;
 }
 
 .cover-photo__job {
-  border-top: 2px solid white;
-  margin: 20px;
-  padding-top: 15px;
+  margin: 15px;
   font-size: 3.5rem;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
@@ -256,8 +256,6 @@ html {
 @media (max-width: 800px) {
   .cover-photo__job {
     font-size: 1.8rem;
-    margin: 15px;
-    padding-top: 10px;
   }
 }
 

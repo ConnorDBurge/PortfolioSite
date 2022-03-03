@@ -168,13 +168,13 @@ html {
     }
 
     &__sub {
+        margin-top: 20px;
+        border-top: 2px solid white;
         width: auto;
     }
 
     &__job {
-        border-top: 2px solid white;
-        margin: 20px;
-        padding-top: 15px;
+        margin: 15px;
         font-size: 3.5rem;
         font-family: $base-font-family;
         font-weight: 400;
@@ -182,8 +182,6 @@ html {
         transition-delay: 1.0s;
         @media (max-width: 800px) {
             font-size: 1.8rem;
-            margin: 15px;
-            padding-top: 10px;
         }
         @media (max-width: 400px) {
             letter-spacing: 3px;
