@@ -175,9 +175,54 @@ html {
 }
 
 .cover-photo__name {
-  margin: 0;
   font-size: 6rem;
   letter-spacing: 6px;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .10em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  -webkit-animation: typing 1s steps(40, end), blink-caret 1.5s step-end infinite;
+          animation: typing 1s steps(40, end), blink-caret 1.5s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
 }
 
 @media (max-width: 800px) {
@@ -229,7 +274,7 @@ html {
           transition-delay: 1.8s;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 825px) {
   .cover-photo__scroll {
     display: none;
   }
@@ -262,7 +307,7 @@ html {
   padding: 0;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 824px) {
   .nav__list {
     display: none;
   }
@@ -270,7 +315,59 @@ html {
 
 .nav__list li {
   margin: 0 10px;
-  text-align: center;
+}
+
+.nav__list li a {
+  opacity: 0;
+  padding: 0 25px;
+  margin: 5px;
+}
+
+.nav__list #nav1 a {
+  -webkit-animation: fade-in-item 1s .2s forwards;
+          animation: fade-in-item 1s .2s forwards;
+}
+
+.nav__list #nav2 a {
+  -webkit-animation: fade-in-item 1s .4s forwards;
+          animation: fade-in-item 1s .4s forwards;
+}
+
+.nav__list #nav3 a {
+  -webkit-animation: fade-in-item 1s .6s forwards;
+          animation: fade-in-item 1s .6s forwards;
+}
+
+.nav__list #nav4 a {
+  -webkit-animation: fade-in-item 1s .8s forwards;
+          animation: fade-in-item 1s .8s forwards;
+}
+
+.nav__list #nav5 a {
+  -webkit-animation: fade-in-item 1s 1.0s forwards;
+          animation: fade-in-item 1s 1.0s forwards;
+}
+
+@-webkit-keyframes fade-in-item {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-item {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }
 
 .nav__item {
@@ -684,6 +781,7 @@ html {
 }
 
 .contact__link:hover {
+  color: orange;
   text-decoration: underline;
 }
 
