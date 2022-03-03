@@ -322,33 +322,33 @@ html {
 }
 
 .nav__list #nav1 a {
-  -webkit-animation: fade-in-item 1s .2s forwards;
-          animation: fade-in-item 1s .2s forwards;
+  -webkit-animation: fade-in-item 1s 1.2s forwards;
+          animation: fade-in-item 1s 1.2s forwards;
 }
 
 .nav__list #nav2 a {
-  -webkit-animation: fade-in-item 1s .4s forwards;
-          animation: fade-in-item 1s .4s forwards;
+  -webkit-animation: fade-in-item 1s 1.4s forwards;
+          animation: fade-in-item 1s 1.4s forwards;
 }
 
 .nav__list #nav3 a {
-  -webkit-animation: fade-in-item 1s .6s forwards;
-          animation: fade-in-item 1s .6s forwards;
+  -webkit-animation: fade-in-item 1s 1.6s forwards;
+          animation: fade-in-item 1s 1.6s forwards;
 }
 
 .nav__list #nav4 a {
-  -webkit-animation: fade-in-item 1s .8s forwards;
-          animation: fade-in-item 1s .8s forwards;
+  -webkit-animation: fade-in-item 1s 1.8s forwards;
+          animation: fade-in-item 1s 1.8s forwards;
 }
 
 .nav__list #nav5 a {
-  -webkit-animation: fade-in-item 1s 1.0s forwards;
-          animation: fade-in-item 1s 1.0s forwards;
+  -webkit-animation: fade-in-item 1s 2.0s forwards;
+          animation: fade-in-item 1s 2.0s forwards;
 }
 
 @-webkit-keyframes fade-in-item {
   0% {
-    display: block;
+    display: none;
     opacity: 0;
   }
   100% {
@@ -359,7 +359,7 @@ html {
 
 @keyframes fade-in-item {
   0% {
-    display: block;
+    display: none;
     opacity: 0;
   }
   100% {

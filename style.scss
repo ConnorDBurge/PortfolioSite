@@ -226,7 +226,7 @@ html {
         li {
             margin: 0 10px;
 
-            a {
+            a { 
                 opacity: 0;
                 padding: 0 25px;
                 margin: 5px;
@@ -234,28 +234,28 @@ html {
         }
 
         #nav1 a {
-            animation: fade-in-item 1s .2s forwards;
+            animation: fade-in-item 1s 1.2s forwards;
         }
 
         #nav2 a {
-            animation: fade-in-item 1s .4s forwards;
+            animation: fade-in-item 1s 1.4s forwards;
         }
 
         #nav3 a {
-            animation: fade-in-item 1s .6s forwards;
+            animation: fade-in-item 1s 1.6s forwards;
         }
 
         #nav4 a {
-            animation: fade-in-item 1s .8s forwards;
+            animation: fade-in-item 1s 1.8s forwards;
         }
 
         #nav5 a {
-            animation: fade-in-item 1s 1.0s forwards;
+            animation: fade-in-item 1s 2.0s forwards;
         }
 
         @keyframes fade-in-item {
-            0%   { display: block; opacity: 0;  }
-            100% { display: block; opacity: 1;  } 
+            0%   { display: none; opacity: 0; }
+            100% { display: block; opacity: 1; } 
         }
     }
 
