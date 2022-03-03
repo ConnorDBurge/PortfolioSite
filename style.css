@@ -170,6 +170,8 @@ html {
   color: #c9c9c9;
   position: absolute;
   top: 15px;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 .cover-photo__name {
@@ -202,6 +204,8 @@ html {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
   letter-spacing: 6px;
+  -webkit-transition-delay: 1.0s;
+          transition-delay: 1.0s;
 }
 
 @media (max-width: 800px) {
@@ -221,6 +225,8 @@ html {
 .cover-photo__scroll {
   position: relative;
   bottom: 130px;
+  -webkit-transition-delay: 1.8s;
+          transition-delay: 1.8s;
 }
 
 @media (min-width: 670px) {
@@ -498,8 +504,16 @@ html {
   height: 50px;
 }
 
+.timeline__hidden {
+  max-width: 800px;
+  max-height: 0;
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.7s linear;
+  transition: max-height 0.7s linear;
+}
+
 .timeline__hidden.hidden {
-  display: none;
+  max-height: 1500px;
 }
 
 .timeline__seemore {

@@ -135,6 +135,7 @@ html {
         color: #c9c9c9;
         position: absolute;
         top: 15px;
+        transition-delay: 0.5s;
     }
 
     &__name{
@@ -161,6 +162,7 @@ html {
         font-family: $base-font-family;
         font-weight: 400;
         letter-spacing: 6px;
+        transition-delay: 1.0s;
         @media (max-width: 800px) {
             font-size: 1.8rem;
             margin: 15px;
@@ -174,6 +176,7 @@ html {
     &__scroll {
         position: relative;
         bottom: 130px;
+        transition-delay: 1.8s;
         @media (min-width: 670px) {
             display: none;
         }
@@ -409,9 +412,14 @@ html {
     }
 
     &__hidden {
+        max-width: 800px;
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.7s linear;
 
         &.hidden {
-            display: none;
+            // display: none;
+            max-height: 1500px;
         }
     }
 
