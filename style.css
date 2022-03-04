@@ -239,8 +239,25 @@ html {
 
 .cover-photo__sub {
   margin-top: 20px;
-  border-top: 2px solid orange;
   width: auto;
+}
+
+.cover-photo__sub:before {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  -webkit-transition: width 1.5s ease;
+  transition: width 1.5s ease;
+  -webkit-transition-delay: 2.5s;
+          transition-delay: 2.5s;
+}
+
+.cover-photo__sub.appear:before {
+  width: 100%;
+  background: orange;
 }
 
 .cover-photo__job {

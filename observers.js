@@ -1,7 +1,9 @@
 window.onload = (event) => {
     const downButton = document.querySelector('.cover-photo__scroll')
+    const subBox = document.querySelector('.cover-photo__sub')
     downButton.classList.add('fader');
     downButton.classList.add('appear');
+    subBox.classList.add('appear');
 };
 
 // Appear class Intersection Observer

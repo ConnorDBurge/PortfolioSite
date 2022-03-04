@@ -172,8 +172,23 @@ html {
 
     &__sub {
         margin-top: 20px;
-        border-top: 2px solid orange;
         width: auto;
+
+        &:before {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0px;
+            background: transparent;
+            transition: width 1.5s ease;
+            transition-delay: 2.5s;
+        }
+
+        &.appear:before {
+            width: 100%;
+            background: orange;
+        }
     }
 
     &__job {
