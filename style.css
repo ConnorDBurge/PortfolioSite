@@ -174,19 +174,19 @@ html {
           transition-delay: 0.5s;
 }
 
-.cover-photo__name {
+.cover-photo__name h1 {
   font-size: 6rem;
   letter-spacing: 6px;
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
-  border-right: .10em solid orange;
+  border-right: 4px solid orange;
   /* The typwriter cursor */
   white-space: nowrap;
   /* Keeps the content on a single line */
   margin: 0 auto;
   /* Gives that scrolling effect as the typing happens */
-  -webkit-animation: typing 1s steps(40, end), blink-caret 1.5s step-end infinite;
-          animation: typing 1s steps(40, end), blink-caret 1.5s step-end infinite;
+  -webkit-animation: typing 1s steps(40, end), blink-caret 1s step-end infinite;
+          animation: typing 1s steps(40, end), blink-caret 1s step-end infinite;
 }
 
 @-webkit-keyframes typing {
@@ -226,20 +226,20 @@ html {
 }
 
 @media (max-width: 800px) {
-  .cover-photo__name {
+  .cover-photo__name h1 {
     font-size: 3.5rem;
   }
 }
 
 @media (max-width: 450px) {
-  .cover-photo__name {
+  .cover-photo__name h1 {
     font-size: 2.2rem;
   }
 }
 
 .cover-photo__sub {
   margin-top: 20px;
-  border-top: 2px solid white;
+  border-top: 2px solid orange;
   width: auto;
 }
 
@@ -270,6 +270,9 @@ html {
   bottom: 130px;
   -webkit-transition-delay: 1.8s;
           transition-delay: 1.8s;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
 @media (min-width: 825px) {

@@ -28,7 +28,7 @@ html {
         transform: translateY(0);
         opacity: 1;
     }
-}
+} 
 
 .flex-center {
     display: flex;
@@ -139,37 +139,40 @@ html {
     }
 
     &__name{
-        font-size: 6rem;
-        letter-spacing: 6px;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .10em solid orange; /* The typwriter cursor */
-        white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        animation: 
-            typing 1.0s steps(40, end),
-            blink-caret 1.5s step-end infinite;
+        
+        h1 {
+            font-size: 6rem;
+            letter-spacing: 6px;
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: 4px solid orange; /* The typwriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            animation: 
+                typing 1.0s steps(40, end),
+                blink-caret 1.0s step-end infinite;
 
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
+            @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+            }
 
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: orange; }
-          }
+            @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color: orange; }
+            }
 
-        @media (max-width: 800px) {
-            font-size: 3.5rem;
-        }
-        @media (max-width: 450px) {
-            font-size: 2.2rem;
+            @media (max-width: 800px) {
+                font-size: 3.5rem;
+            }
+            @media (max-width: 450px) {
+                font-size: 2.2rem;
+            }
         }
     }
 
     &__sub {
         margin-top: 20px;
-        border-top: 2px solid white;
+        border-top: 2px solid orange;
         width: auto;
     }
 
@@ -192,6 +195,8 @@ html {
         position: relative;
         bottom: 130px;
         transition-delay: 1.8s;
+        opacity: 0;
+        transform: translateY(100px);
         @media (min-width: 825px) {
             display: none;
         }
